@@ -24,6 +24,7 @@ RUN pip install --no-cache-dir pytest
 COPY . . 
 RUN pytest
 
+# Final stage - copy the application code and set the entrypoint.
 FROM base AS final
 COPY . .
 EXPOSE 8000
